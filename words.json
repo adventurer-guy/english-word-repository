@@ -1,0 +1,397 @@
+[
+  {
+    "word": "pen",
+    "meaning": "筆",
+    "level": "一年級"
+  },
+  {
+    "word": "eraser",
+    "meaning": "橡皮擦",
+    "level": "一年級"
+  },
+  {
+    "word": "pencil",
+    "meaning": "鉛筆",
+    "level": "一年級"
+  },
+  {
+    "word": "ruler",
+    "meaning": "尺",
+    "level": "一年級"
+  },
+  {
+    "word": "bookcase",
+    "meaning": "書櫃",
+    "level": "一年級"
+  },
+  {
+    "word": "bag",
+    "meaning": "書包",
+    "level": "一年級"
+  },
+  {
+    "word": "folder",
+    "meaning": "資料夾",
+    "level": "一年級"
+  },
+  {
+    "word": "door",
+    "meaning": "門",
+    "level": "一年級"
+  },
+  {
+    "word": "window",
+    "meaning": "窗戶",
+    "level": "一年級"
+  },
+  {
+    "word": "cat",
+    "meaning": "貓",
+    "level": "一年級"
+  },
+  {
+    "word": "ant",
+    "meaning": "螞蟻",
+    "level": "一年級"
+  },
+  {
+    "word": "yak",
+    "meaning": "犛牛",
+    "level": "一年級"
+  },
+  {
+    "word": "ax",
+    "meaning": "斧頭",
+    "level": "一年級"
+  },
+  {
+    "word": "jam",
+    "meaning": "果醬",
+    "level": "一年級"
+  },
+  {
+    "word": "ram",
+    "meaning": "撞擊",
+    "level": "一年級"
+  },
+  {
+    "word": "yam",
+    "meaning": "番薯",
+    "level": "一年級"
+  },
+  {
+    "word": "dam",
+    "meaning": "水壩或阻擋",
+    "level": "一年級"
+  },
+  {
+    "word": "desk",
+    "meaning": "書桌",
+    "level": "一年級"
+  },
+  {
+    "word": "chair",
+    "meaning": "椅子",
+    "level": "一年級"
+  },
+  {
+    "word": "wastebasket",
+    "meaning": "廢紙籃",
+    "level": "一年級"
+  },
+  {
+    "word": "doll",
+    "meaning": "娃娃",
+    "level": "一年級"
+  },
+  {
+    "word": "ball",
+    "meaning": "球",
+    "level": "一年級"
+  },
+  {
+    "word": "teddy bear",
+    "meaning": "泰迪熊",
+    "level": "一年級"
+  },
+  {
+    "word": "puzzle",
+    "meaning": "拼圖",
+    "level": "一年級"
+  },
+  {
+    "word": "car",
+    "meaning": "車",
+    "level": "一年級"
+  },
+  {
+    "word": "kite",
+    "meaning": "風箏",
+    "level": "一年級"
+  },
+  {
+    "word": "bike",
+    "meaning": "腳踏車",
+    "level": "一年級"
+  },
+  {
+    "word": "train",
+    "meaning": "火車或訓練",
+    "level": "一年級"
+  },
+  {
+    "word": "game",
+    "meaning": "遊戲或比賽",
+    "level": "一年級"
+  },
+  {
+    "word": "scooter",
+    "meaning": "機車",
+    "level": "一年級"
+  },
+  {
+    "word": "fan",
+    "meaning": "風扇或粉絲",
+    "level": "一年級"
+  },
+  {
+    "word": "man",
+    "meaning": "男人或人",
+    "level": "一年級"
+  },
+  {
+    "word": "pan",
+    "meaning": "平底鍋",
+    "level": "一年級"
+  },
+  {
+    "word": "can",
+    "meaning": "能夠或可以",
+    "level": "一年級"
+  },
+  {
+    "word": "pencil case",
+    "meaning": "鉛筆盒",
+    "level": "一年級"
+  },
+  {
+    "word": "crayon",
+    "meaning": "蠟筆",
+    "level": "一年級"
+  },
+  {
+    "word": "marker",
+    "meaning": "馬克筆",
+    "level": "一年級"
+  },
+  {
+    "word": "pad",
+    "meaning": "平板",
+    "level": "一年級"
+  },
+  {
+    "word": "map",
+    "meaning": "地圖",
+    "level": "一年級"
+  },
+  {
+    "word": "cap",
+    "meaning": "蓋子",
+    "level": "一年級"
+  },
+  {
+    "word": "rag",
+    "meaning": "抹布",
+    "level": "一年級"
+  },
+  {
+    "word": "two",
+    "meaning": "2",
+    "level": "一年級"
+  },
+  {
+    "word": "three",
+    "meaning": "3",
+    "level": "一年級"
+  },
+  {
+    "word": "four",
+    "meaning": "4",
+    "level": "一年級"
+  },
+  {
+    "word": "arms",
+    "meaning": "手臂",
+    "level": "一年級"
+  },
+  {
+    "word": "nose",
+    "meaning": "鼻子",
+    "level": "一年級"
+  },
+  {
+    "word": "face",
+    "meaning": "臉",
+    "level": "一年級"
+  },
+  {
+    "word": "legs",
+    "meaning": "腿",
+    "level": "一年級"
+  },
+  {
+    "word": "ears",
+    "meaning": "耳朵",
+    "level": "一年級"
+  },
+  {
+    "word": "finger",
+    "meaning": "手指",
+    "level": "一年級"
+  },
+  {
+    "word": "hands",
+    "meaning": "手掌",
+    "level": "一年級"
+  },
+  {
+    "word": "eyes",
+    "meaning": "眼睛",
+    "level": "一年級"
+  },
+  {
+    "word": "eyebrows",
+    "meaning": "眉毛",
+    "level": "一年級"
+  },
+  {
+    "word": "bird",
+    "meaning": "鳥",
+    "level": "一年級"
+  },
+  {
+    "word": "hamster",
+    "meaning": "倉鼠",
+    "level": "一年級"
+  },
+  {
+    "word": "shoulders",
+    "meaning": "肩膀",
+    "level": "一年級"
+  },
+  {
+    "word": "classroom",
+    "meaning": "教室",
+    "level": "二年級"
+  },
+  {
+    "word": "table",
+    "meaning": "桌子",
+    "level": "二年級"
+  },
+  {
+    "word": "computer",
+    "meaning": "電腦",
+    "level": "二年級"
+  },
+  {
+    "word": "coat",
+    "meaning": "外套",
+    "level": "二年級"
+  },
+  {
+    "word": "hook",
+    "meaning": "鉤子",
+    "level": "二年級"
+  },
+  {
+    "word": "board",
+    "meaning": "板子",
+    "level": "二年級"
+  },
+  {
+    "word": "poster",
+    "meaning": "海報",
+    "level": "二年級"
+  },
+  {
+    "word": "picture",
+    "meaning": "圖畫",
+    "level": "二年級"
+  },
+  {
+    "word": "drawer",
+    "meaning": "抽屜",
+    "level": "二年級"
+  },
+  {
+    "word": "cabinet",
+    "meaning": "櫃子",
+    "level": "二年級"
+  },
+  {
+    "word": "cd player",
+    "meaning": "CD撥放器",
+    "level": "二年級"
+  },
+  {
+    "word": "black",
+    "meaning": "黑色",
+    "level": "二年級"
+  },
+  {
+    "word": "blanket",
+    "meaning": "毯子",
+    "level": "二年級"
+  },
+  {
+    "word": "clock",
+    "meaning": "時鐘",
+    "level": "二年級"
+  },
+  {
+    "word": "club",
+    "meaning": "俱樂部",
+    "level": "二年級"
+  },
+  {
+    "word": "broom",
+    "meaning": "掃帚",
+    "level": "二年級"
+  },
+  {
+    "word": "bride",
+    "meaning": "新娘",
+    "level": "二年級"
+  },
+  {
+    "word": "crab",
+    "meaning": "螃蟹",
+    "level": "二年級"
+  },
+  {
+    "word": "crocodile",
+    "meaning": "鱷魚",
+    "level": "二年級"
+  },
+  {
+    "word": "smock",
+    "meaning": "工作服",
+    "level": "二年級"
+  },
+  {
+    "word": "paint",
+    "meaning": "畫畫",
+    "level": "二年級"
+  },
+  {
+    "word": "paintbrush",
+    "meaning": "畫畫刷子",
+    "level": "二年級"
+  },
+  {
+    "word": "water bottle",
+    "meaning": "水瓶",
+    "level": "二年級"
+  }
+]

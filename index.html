@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文單字分級測驗系統</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f4f4f9; color: #333; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; min-width: 320px; margin-top: 15px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin: 5px; }
+        button:hover { background: #0056b3; }
+        input { padding: 10px; font-size: 16px; width: 80%; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
+        select { padding: 10px; font-size: 16px; border-radius: 5px; margin-bottom: 10px; width: 60%; }
+        .result { font-weight: bold; margin-top: 15px; font-size: 18px; min-height: 25px; }
+        .wrong-list { margin-top: 30px; text-align: left; display: inline-block; width: 320px; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>📝 英文單字分級複習測驗</h1>
+    
+    <!-- 分級選擇器 -->
+    <div>
+        <label for="level-select"><b>選擇單字難度：</b></label>
+        <select id="level-select" onchange="changeLevel()">
+            <option value="all">全部單字</option>
+            <option value="一年級">一年級單字</option>
+            <option value="二年級">二年級單字</option>
+            <option value="三年級">三年級單字</option>
+        </select>
+    </div>
+
+    <div class="card">
+        <h2 id="question">正在載入單字庫...</h2>
+        <input type="text" id="answer-input" placeholder="請輸入英文單字" autocomplete="off">
+        <br>
+        <button onclick="checkAnswer()">送出答案</button>
+        <button onclick="nextQuestion()">下一題</button>
+        <button onclick="speakCurrentWord()" style="background:#28a745;">🔊 聽發音</button>
+        <div id="result-msg" class="result"></div>
+    </div>
+
+    <br>
+    <div class="wrong-list">
+        <h3>❌ 我的錯題本 (<span id="wrong-count">0</span>)</h3>
+        <ul id="wrong-ul"></ul>
+        <button onclick="clearWrongWords()" style="background:#dc3545; padding: 5px 10px; font-size: 14px;">清空錯題本</button>
+    </div>
+
+    <script>
+        let allWords = [];       // 完整字庫
+        let filteredBank = [];   // 篩選後的當前字庫
+        let currentQuiz = null;  // 當前題目
+        let wrongWords = JSON.parse(localStorage.getItem('wrongWords')) || []; // 錯題本
+
+        // 預設備用資料（當讀取不到 words.json 時使用）
+        const mockData = [
+            {"word": "apple", "meaning": "蘋果", "level": "一年級"},
+            {"word": "banana", "meaning": "香蕉", "level": "一年級"},
+            {"word": "invest", "meaning": "投資", "level": "二年級"},
+            {"word": "negotiate", "meaning": "談判", "level": "三年級"}
+        ];
+
+        window.onload = function() {
+            // 嘗試載入外部 words.json，若找不到或報錯則改用預設資料
+            fetch('words.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('網絡問題或檔案不存在');
+                    return response.json();
+                })
+                .then(data => {
+                    allWords = data;
+                    initApp();
+                })
+                .catch(error => {
+                    console.warn('無法載入 words.json，改用內部預設資料。', error);
+                    allWords = mockData;
+                    initApp();
+                });
+        };
+
+        function initApp() {
+            changeLevel();
+            updateWrongListUI();
+            
+            // 綁定 Enter 鍵快速送出
+            document.getElementById('answer-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') checkAnswer();
+            });
+        }
+
+        // 當切換下拉選單時，重新篩選字庫
+        function changeLevel() {
+            const selectedLevel = document.getElementById('level-select').value;
+            
+            if (selectedLevel === "all") {
+                filteredBank = [...allWords];
+            } else {
+                filteredBank = allWords.filter(item => item.level === selectedLevel);
+            }
+            
+            nextQuestion();
+        }
+
+        // 出題邏輯
+        function nextQuestion() {
+            if (filteredBank.length === 0) {
+                document.getElementById('question').innerText = "該級別目前沒有單字！";
+                currentQuiz = null;
+                return;
+            }
+            document.getElementById('result-msg').innerHTML = "";
+            document.getElementById('answer-input').value = "";
+            document.getElementById('answer-input').focus();
+            
+            // 隨機抽一題
+            const randomIndex = Math.floor(Math.random() * filteredBank.length);
+            currentQuiz = filteredBank[randomIndex];
+            
+            document.getElementById('question').innerText = `請輸入「${currentQuiz.meaning}」的英文`;
+        }
+
+        // 檢查答案
+        function checkAnswer() {
+            if (!currentQuiz) return;
+            const userInput = document.getElementById('answer-input').value.trim().toLowerCase();
+            const correctAnswer = currentQuiz.word.toLowerCase();
+            const resultMsg = document.getElementById('result-msg');
+
+            if (userInput === correctAnswer) {
+                resultMsg.innerHTML = "<span style='color:green;'>答對了！🎉</span>";
+                speakCurrentWord();
+            } else {
+                resultMsg.innerHTML = `<span style='color:red;'>答錯了 ❌ 正確答案是: ${currentQuiz.word}</span>`;
+                
+                if (!wrongWords.some(w => w.word === currentQuiz.word)) {
+                    wrongWords.push(currentQuiz);
+                    localStorage.setItem('wrongWords', JSON.stringify(wrongWords));
+                    updateWrongListUI();
+                }
+            }
+        }
+
+        // 發音功能
+        function speakCurrentWord() {
+            if (!currentQuiz) return;
+            const utterance = new SpeechSynthesisUtterance(currentQuiz.word);
+            utterance.lang = 'en-US';
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // 更新錯題本 UI
+        function updateWrongListUI() {
+            document.getElementById('wrong-count').innerText = wrongWords.length;
+            const ul = document.getElementById('wrong-ul');
+            ul.innerHTML = "";
+            
+            wrongWords.forEach((item) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<b>[${item.level}]</b> ${item.word} : ${item.meaning}`;
+                ul.appendChild(li);
+            });
+        }
+
+        // 清空錯題本
+        function clearWrongWords() {
+            if (confirm("確定要清空所有錯題紀錄嗎？")) {
+                wrongWords = [];
+                localStorage.removeItem('wrongWords');
+                updateWrongListUI();
+            }
+        }
+    </script>
+</body>
+</html>
