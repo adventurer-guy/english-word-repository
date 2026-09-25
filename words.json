@@ -393,5 +393,375 @@
     "word": "water bottle",
     "meaning": "水瓶",
     "level": "二年級"
+  },
+  {
+    "word": "web",
+    "meaning": "網子",
+    "level": "一年級"
+  },
+  {
+    "word": "vet",
+    "meaning": "獸醫",
+    "level": "一年級"
+  },
+  {
+    "word": "ten",
+    "meaning": "10",
+    "level": "一年級"
+  },
+  {
+    "word": "jet",
+    "meaning": "噴射機",
+    "level": "一年級"
+  },
+  {
+    "word": "net",
+    "meaning": "網子（網路)",
+    "level": "一年級"
+  },
+  {
+    "word": "wet",
+    "meaning": "濕的",
+    "level": "一年級"
+  },
+  {
+    "word": "pet",
+    "meaning": "寵物",
+    "level": "一年級"
+  },
+  {
+    "word": "hen",
+    "meaning": "母雞",
+    "level": "一年級"
+  },
+  {
+    "word": "red",
+    "meaning": "紅色",
+    "level": "一年級"
+  },
+  {
+    "word": "bed",
+    "meaning": "床",
+    "level": "一年級"
+  },
+  {
+    "word": "horse",
+    "meaning": "馬",
+    "level": "一年級"
+  },
+  {
+    "word": "frog",
+    "meaning": "青蛙",
+    "level": "一年級"
+  },
+  {
+    "word": "turtle",
+    "meaning": "烏龜",
+    "level": "一年級"
+  },
+  {
+    "word": "rabbit",
+    "meaning": "兔子",
+    "level": "一年級"
+  },
+  {
+    "word": "equal",
+    "meaning": "相等或等於",
+    "level": "一年級"
+  },
+  {
+    "word": "plus",
+    "meaning": ":家或是額外",
+    "level": "一年級"
+  },
+  {
+    "word": "short",
+    "meaning": "短的",
+    "level": "一年級"
+  },
+  {
+    "word": "flag",
+    "meaning": "旗子",
+    "level": "二年級"
+  },
+  {
+    "word": "globe",
+    "meaning": "全球",
+    "level": "二年級"
+  },
+  {
+    "word": "glass",
+    "meaning": "玻璃",
+    "level": "二年級"
+  },
+  {
+    "word": "friday",
+    "meaning": "星期五",
+    "level": "二年級"
+  },
+  {
+    "word": "green",
+    "meaning": "綠色",
+    "level": "二年級"
+  },
+  {
+    "word": "grass",
+    "meaning": "草",
+    "level": "二年級"
+  },
+  {
+    "word": "plate",
+    "meaning": "盤子",
+    "level": "二年級"
+  },
+  {
+    "word": "play",
+    "meaning": "玩",
+    "level": "二年級"
+  },
+  {
+    "word": "slide",
+    "meaning": "溜滑梯",
+    "level": "二年級"
+  },
+  {
+    "word": "sleep",
+    "meaning": "睡覺",
+    "level": "二年級"
+  },
+  {
+    "word": "computer",
+    "meaning": "電腦",
+    "level": "二年級"
+  },
+  {
+    "word": "magnet",
+    "meaning": "磁鐵",
+    "level": "二年級"
+  },
+  {
+    "word": "string",
+    "meaning": "線",
+    "level": "二年級"
+  },
+  {
+    "word": "glue",
+    "meaning": "膠水",
+    "level": "二年級"
+  },
+  {
+    "word": "stick",
+    "meaning": "惃子",
+    "level": "二年級"
+  },
+  {
+    "word": "magazine",
+    "meaning": "雜誌",
+    "level": "二年級"
+  },
+  {
+    "word": "tape",
+    "meaning": "膠帶",
+    "level": "二年級"
+  },
+  {
+    "word": "tired",
+    "meaning": "累",
+    "level": "二年級"
+  },
+  {
+    "word": "whole",
+    "meaning": "全",
+    "level": "二年級"
+  },
+  {
+    "word": "half",
+    "meaning": "一半",
+    "level": "二年級"
+  },
+  {
+    "word": "third",
+    "meaning": "第三",
+    "level": "二年級"
+  },
+  {
+    "word": "quarter",
+    "meaning": "四分之一",
+    "level": "二年級"
+  },
+  {
+    "word": "three quarters",
+    "meaning": "四分之三",
+    "level": "二年級"
+  },
+  {
+    "word": "drum",
+    "meaning": "鼓",
+    "level": "二年級"
+  },
+  {
+    "word": "dress",
+    "meaning": "衣著或洋裝",
+    "level": "二年級"
+  },
+  {
+    "word": "truck",
+    "meaning": "卡車",
+    "level": "二年級"
+  },
+  {
+    "word": "smile",
+    "meaning": "微笑",
+    "level": "二年級"
+  },
+  {
+    "word": "smoke",
+    "meaning": "煙",
+    "level": "二年級"
+  },
+  {
+    "word": "snake",
+    "meaning": "蛇",
+    "level": "二年級"
+  },
+  {
+    "word": "snow",
+    "meaning": "雪",
+    "level": "二年級"
+  },
+  {
+    "word": "spoon",
+    "meaning": "湯匙",
+    "level": "二年級"
+  },
+  {
+    "word": "spot",
+    "meaning": "點點",
+    "level": "二年級"
+  },
+  {
+    "word": "swing",
+    "meaning": "搖晃或盪鞦韆",
+    "level": "二年級"
+  },
+  {
+    "word": "swim",
+    "meaning": "游泳",
+    "level": "二年級"
+  },
+  {
+    "word": "ride a horse",
+    "meaning": "騎馬",
+    "level": "二年級"
+  },
+  {
+    "word": "skateboard",
+    "meaning": "滑板",
+    "level": "二年級"
+  },
+  {
+    "word": "play tennis",
+    "meaning": "打網球",
+    "level": "二年級"
+  },
+  {
+    "word": "play soccer",
+    "meaning": "踢足球",
+    "level": "二年級"
+  },
+  {
+    "word": "in front of",
+    "meaning": "在...前面",
+    "level": "二年級"
+  },
+  {
+    "word": "behind",
+    "meaning": "在...後面",
+    "level": "二年級"
+  },
+  {
+    "word": "next to",
+    "meaning": "下一個",
+    "level": "二年級"
+  },
+  {
+    "word": "between",
+    "meaning": "在...中間",
+    "level": "二年級"
+  },
+  {
+    "word": "stop",
+    "meaning": "停止",
+    "level": "二年級"
+  },
+  {
+    "word": "stamp",
+    "meaning": "踩",
+    "level": "二年級"
+  },
+  {
+    "word": "test",
+    "meaning": "考試或測試",
+    "level": "二年級"
+  },
+  {
+    "word": "fast",
+    "meaning": "快",
+    "level": "二年級"
+  },
+  {
+    "word": "gloves",
+    "meaning": "手套",
+    "level": "二年級"
+  },
+  {
+    "word": "socks",
+    "meaning": "襪子",
+    "level": "二年級"
+  },
+  {
+    "word": "boots",
+    "meaning": "靴子",
+    "level": "二年級"
+  },
+  {
+    "word": "shirt",
+    "meaning": "上衣",
+    "level": "二年級"
+  },
+  {
+    "word": "jacket",
+    "meaning": "外套",
+    "level": "二年級"
+  },
+  {
+    "word": "skim",
+    "meaning": "快速瀏覽",
+    "level": "二年級"
+  },
+  {
+    "word": "detail",
+    "meaning": "細節",
+    "level": "二年級"
+  },
+  {
+    "word": "jeans",
+    "meaning": "牛仔褲",
+    "level": "二年級"
+  },
+  {
+    "word": "shoes",
+    "meaning": "鞋子",
+    "level": "二年級"
+  },
+  {
+    "word": "sweater",
+    "meaning": "毛衣",
+    "level": "二年級"
+  },
+  {
+    "word": "pants",
+    "meaning": "褲子",
+    "level": "二年級"
   }
 ]
