@@ -763,5 +763,305 @@
     "word": "pants",
     "meaning": "褲子",
     "level": "二年級"
+  },
+  {
+    "word": "teacher",
+    "meaning": "老師",
+    "level": "一年級"
+  },
+  {
+    "word": "student",
+    "meaning": "學生",
+    "level": "一年級"
+  },
+  {
+    "word": "cook",
+    "meaning": "廚師",
+    "level": "一年級"
+  },
+  {
+    "word": "firefighter",
+    "meaning": "消防員",
+    "level": "一年級"
+  },
+  {
+    "word": "pilot",
+    "meaning": "機師",
+    "level": "一年級"
+  },
+  {
+    "word": "doctor",
+    "meaning": "醫生",
+    "level": "一年級"
+  },
+  {
+    "word": "police officer",
+    "meaning": "警察",
+    "level": "一年級"
+  },
+  {
+    "word": "farmer",
+    "meaning": "農夫",
+    "level": "一年級"
+  },
+  {
+    "word": "mailman",
+    "meaning": "郵差",
+    "level": "一年級"
+  },
+  {
+    "word": "zookeeper",
+    "meaning": "動物園管理員",
+    "level": "一年級"
+  },
+  {
+    "word": "hip",
+    "meaning": "屁股",
+    "level": "一年級"
+  },
+  {
+    "word": "ink",
+    "meaning": "墨水",
+    "level": "一年級"
+  },
+  {
+    "word": "zip",
+    "meaning": "拉鍊",
+    "level": "一年級"
+  },
+  {
+    "word": "lip",
+    "meaning": "嘴唇",
+    "level": "一年級"
+  },
+  {
+    "word": "sip",
+    "meaning": "啜吸",
+    "level": "一年級"
+  },
+  {
+    "word": "rip",
+    "meaning": "撕裂",
+    "level": "一年級"
+  },
+  {
+    "word": "orange",
+    "meaning": "橘色",
+    "level": "一年級"
+  },
+  {
+    "word": "black",
+    "meaning": "黑色",
+    "level": "一年級"
+  },
+  {
+    "word": "purple",
+    "meaning": "紫色",
+    "level": "一年級"
+  },
+  {
+    "word": "pink",
+    "meaning": "粉紅色",
+    "level": "一年級"
+  },
+  {
+    "word": "nurse",
+    "meaning": "護士",
+    "level": "一年級"
+  },
+  {
+    "word": "lid",
+    "meaning": "蓋子",
+    "level": "一年級"
+  },
+  {
+    "word": "tip",
+    "meaning": "尖端OR提示",
+    "level": "一年級"
+  },
+  {
+    "word": "retangle",
+    "meaning": "長方形",
+    "level": "一年級"
+  },
+  {
+    "word": "triangle",
+    "meaning": "三角形",
+    "level": "一年級"
+  },
+  {
+    "word": "oval",
+    "meaning": "橢圓形",
+    "level": "一年級"
+  },
+  {
+    "word": "heart",
+    "meaning": "愛心OR心型OR心臟",
+    "level": "一年級"
+  },
+  {
+    "word": "salad",
+    "meaning": "沙拉",
+    "level": "二年級"
+  },
+  {
+    "word": "fries",
+    "meaning": "薯條",
+    "level": "二年級"
+  },
+  {
+    "word": "milkshake",
+    "meaning": "奶昔",
+    "level": "二年級"
+  },
+  {
+    "word": "cheese sandwich",
+    "meaning": "三明治",
+    "level": "二年級"
+  },
+  {
+    "word": "chicken",
+    "meaning": "雞肉OR雞",
+    "level": "二年級"
+  },
+  {
+    "word": "ten",
+    "meaning": "十",
+    "level": "二年級"
+  },
+  {
+    "word": "twenty",
+    "meaning": "二十",
+    "level": "二年級"
+  },
+  {
+    "word": "thirty",
+    "meaning": "三十",
+    "level": "二年級"
+  },
+  {
+    "word": "forty",
+    "meaning": "四十",
+    "level": "二年級"
+  },
+  {
+    "word": "fifty",
+    "meaning": "五十",
+    "level": "二年級"
+  },
+  {
+    "word": "sixty",
+    "meaning": "六十",
+    "level": "二年級"
+  },
+  {
+    "word": "seventy",
+    "meaning": "七十",
+    "level": "二年級"
+  },
+  {
+    "word": "eighty",
+    "meaning": "八十",
+    "level": "二年級"
+  },
+  {
+    "word": "ninety",
+    "meaning": "九十",
+    "level": "二年級"
+  },
+  {
+    "word": "one hundred",
+    "meaning": "一百",
+    "level": "二年級"
+  },
+  {
+    "word": "shell",
+    "meaning": "貝殼",
+    "level": "二年級"
+  },
+  {
+    "word": "ship",
+    "meaning": "船",
+    "level": "二年級"
+  },
+  {
+    "word": "fish",
+    "meaning": "魚",
+    "level": "二年級"
+  },
+  {
+    "word": "brush",
+    "meaning": "梳子",
+    "level": "二年級"
+  },
+  {
+    "word": "chick",
+    "meaning": "小雞",
+    "level": "二年級"
+  },
+  {
+    "word": "lunch",
+    "meaning": "午餐",
+    "level": "二年級"
+  },
+  {
+    "word": "watch",
+    "meaning": "手錶OR看",
+    "level": "二年級"
+  },
+  {
+    "word": "catch",
+    "meaning": "接住",
+    "level": "二年級"
+  },
+  {
+    "word": "phone",
+    "meaning": "電話",
+    "level": "二年級"
+  },
+  {
+    "word": "dolphin",
+    "meaning": "海豚",
+    "level": "二年級"
+  },
+  {
+    "word": "whale",
+    "meaning": "鯨魚",
+    "level": "二年級"
+  },
+  {
+    "word": "white",
+    "meaning": "白色",
+    "level": "二年級"
+  },
+  {
+    "word": "movie theater",
+    "meaning": "電影院",
+    "level": "二年級"
+  },
+  {
+    "word": "gym",
+    "meaning": "體育館",
+    "level": "二年級"
+  },
+  {
+    "word": "train station",
+    "meaning": "火車站",
+    "level": "二年級"
+  },
+  {
+    "word": "shopping mall",
+    "meaning": "購物中心",
+    "level": "二年級"
+  },
+  {
+    "word": "factory",
+    "meaning": "工廠",
+    "level": "二年級"
+  },
+  {
+    "word": "shoe repair shop",
+    "meaning": "修鞋店",
+    "level": "二年級"
   }
 ]

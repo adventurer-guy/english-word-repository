@@ -5,15 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英文單字分級測驗系統</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f4f4f9; color: #333; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; min-width: 320px; margin-top: 15px; }
-        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin: 5px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; text-align: center; padding: 20px; background: #f4f4f9; color: #333; }
+        
+        /* 讓主體內容左右分欄排列 */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); min-width: 320px; max-width: 400px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 16px; margin: 5px; transition: background 0.2s; }
         button:hover { background: #0056b3; }
-        input { padding: 10px; font-size: 16px; width: 80%; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
-        select { padding: 10px; font-size: 16px; border-radius: 5px; margin-bottom: 10px; width: 60%; }
+        input { padding: 10px; font-size: 16px; width: 80%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; text-align: center; outline: none; }
+        input:focus { border-color: #007bff; box-shadow: 0 0 5px rgba(0,123,255,0.3); }
+        select { padding: 10px; font-size: 16px; border-radius: 8px; margin-bottom: 10px; width: 60%; border: 1px solid #ddd; outline: none; }
         .result { font-weight: bold; margin-top: 15px; font-size: 18px; min-height: 25px; }
-        .wrong-list { margin-top: 30px; text-align: left; display: inline-block; width: 320px; }
-        li { margin: 5px 0; }
+        
+        /* 錯題本樣式 */
+        .side-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: left; width: 320px; max-height: 400px; overflow-y: auto; }
+        .side-box h3 { margin-top: 0; font-size: 16px; border-bottom: 2px solid #f0f0f5; padding-bottom: 10px; color: #444; }
+        
+        /* 右側精簡英文單字欄位樣式（高質感膠囊卡片） */
+        .right-panel { background: white; padding: 18px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: left; width: 210px; max-height: 480px; overflow-y: auto; }
+        .right-panel h3 { margin-top: 0; font-size: 15px; border-bottom: 2px solid #f0f0f5; padding-bottom: 10px; text-align: center; color: #444; }
+        
+        ul { padding-left: 20px; margin: 0; }
+        li { margin: 4px 0; font-size: 14px; }
+        
+        /* 升級後的質感單字膠囊列表 */
+        .word-list-clean { 
+            list-style-type: none; 
+            padding-left: 0; 
+            display: flex;
+            flex-direction: column;
+            gap: 6px; /* 膠囊之間的間距 */
+            margin-top: 10px;
+        }
+        
+        .word-list-clean li { 
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        /* 滑鼠移上去時的小動畫特效 */
+        .word-list-clean li:hover {
+            background: #e2eef8;
+            border-color: #b8d4f0;
+            color: #0056b3;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -31,21 +90,33 @@
         </select>
     </div>
 
-    <div class="card">
-        <h2 id="question">正在載入單字庫...</h2>
-        <input type="text" id="answer-input" placeholder="請輸入英文單字" autocomplete="off">
-        <br>
-        <button onclick="checkAnswer()">送出答案</button>
-        <button onclick="nextQuestion()">下一題</button>
-        <button onclick="speakCurrentWord()" style="background:#28a745;">🔊 聽發音</button>
-        <div id="result-msg" class="result"></div>
-    </div>
+    <div class="main-container">
+        <!-- 左側：測驗卡片與錯題本 -->
+        <div class="left-panel">
+            <div class="card">
+                <h2 id="question">正在載入單字庫...</h2>
+                <input type="text" id="answer-input" placeholder="請輸入英文單字" autocomplete="off">
+                <br>
+                <button onclick="checkAnswer()">送出答案</button>
+                <button onclick="nextQuestion()">下一題</button>
+                <button onclick="speakCurrentWord()" style="background:#28a745;">🔊 聽發音</button>
+                <div id="result-msg" class="result"></div>
+            </div>
 
-    <br>
-    <div class="wrong-list">
-        <h3>❌ 我的錯題本 (<span id="wrong-count">0</span>)</h3>
-        <ul id="wrong-ul"></ul>
-        <button onclick="clearWrongWords()" style="background:#dc3545; padding: 5px 10px; font-size: 14px;">清空錯題本</button>
+            <div class="side-box">
+                <h3>❌ 我的錯題本 (<span id="wrong-count">0</span>)</h3>
+                <ul id="wrong-ul"></ul>
+                <button onclick="clearWrongWords()" style="background:#dc3545; padding: 5px 10px; font-size: 12px; margin-top: 10px;">清空錯題本</button>
+            </div>
+        </div>
+
+        <!-- 右側：依目前年級顯示最新 25 個英文單字 -->
+        <div class="right-panel">
+            <h3 id="right-panel-title">最新 25 個單字</h3>
+            <ul id="latest-ul" class="word-list-clean">
+                <li>載入中...</li>
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -90,7 +161,7 @@
             });
         }
 
-        // 當切換下拉選單時，重新篩選字庫
+        // 當切換下拉選單時，重新篩選字庫與右側清單
         function changeLevel() {
             const selectedLevel = document.getElementById('level-select').value;
             
@@ -100,6 +171,7 @@
                 filteredBank = allWords.filter(item => item.level === selectedLevel);
             }
             
+            updateLatestWordsUI(selectedLevel); // 根據選定的年級更新右側單字
             nextQuestion();
         }
 
@@ -159,6 +231,36 @@
             wrongWords.forEach((item) => {
                 const li = document.createElement('li');
                 li.innerHTML = `<b>[${item.level}]</b> ${item.word} : ${item.meaning}`;
+                ul.appendChild(li);
+            });
+        }
+
+        // 更新右側「依選擇年級顯示最後 25 個英文單字」UI
+        function updateLatestWordsUI(selectedLevel) {
+            const ul = document.getElementById('latest-ul');
+            const titleEl = document.getElementById('right-panel-title');
+            ul.innerHTML = "";
+
+            // 根據選擇的年級篩選對應的單字群
+            let targetWords = allWords;
+            if (selectedLevel !== "all") {
+                targetWords = allWords.filter(item => item.level === selectedLevel);
+                titleEl.innerText = `${selectedLevel}最新 25 字`;
+            } else {
+                titleEl.innerText = `全部最新 25 字`;
+            }
+
+            // 取出該分類最後的 25 個單字 (.slice(-25))，並反轉讓最新加入的排在最上方
+            const latest25 = targetWords.slice(-25).reverse();
+
+            if (latest25.length === 0) {
+                ul.innerHTML = "<li>無單字</li>";
+                return;
+            }
+
+            latest25.forEach((item) => {
+                const li = document.createElement('li');
+                li.innerText = item.word; // 只顯示英文單字
                 ul.appendChild(li);
             });
         }
